@@ -19,6 +19,24 @@ body {
     align-items: center;
     border-bottom: 1px solid rgb(164, 124, 31);
 }
+.navigation-btn {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color:  rgb(251, 241, 229);
+   border: 1px solid rgb(251, 241, 229);
+   display: grid;
+   place-content: center;
+   gap: 8px;
+   transition: 0,25s ease;
+   display: none;
+}
+.line {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(164, 124, 31);
+    transition: 0,25s ease;
+}
 ul {
     display: flex;
     gap: 45px;
@@ -56,10 +74,48 @@ span {
 .main-about {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 60px;
     border-bottom: 1px solid rgb(164, 124, 31);
 }
 .main-about h1 {
     grid-column: 1 / span 3;
 }
- 
+.main-card {
+     margin-bottom: 100px;
+     text-align: center;
+}
+.main-card_img {
+    width: 200px;
+    height: 200px;
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        margin: 0 25px;
+    }
+    .navigation-btn {
+        display: grid;
+    }
+    .navigation-btn:is(:hover, :focus-visible) { gap: 10px; }
+    .navigation-btn.active { gap: 8px; }
+    ul {
+        display: none;
+    }
+    .main-info {
+        flex-direction: column;
+    }
+    .main-img img  {
+        padding: 0;
+    }
+    .main-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main-about h1 {
+        text-align: center;
+    }
+    .main-card {
+        margin-bottom: 40px;
+    }
+
+} 
