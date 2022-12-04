@@ -3,6 +3,9 @@
     color: rgb(164, 124, 31);
     font-weight: 400;
 }
+html {
+    scroll-behavior: smooth;
+}
 html,
 body {
     min-height: 100vh;
@@ -42,6 +45,18 @@ ul {
     gap: 45px;
     list-style: none;
 }
+li {
+    background: linear-gradient(rgb(164, 124, 31), rgb(164, 124, 31));
+    background-size: 0 10%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition-duration: 1s;
+    transition-property: background-size;
+}
+li:hover {
+    background-size: 100% 10%;
+    transform: translateY(-3px);
+}
 a {
     text-decoration: none;
 }
@@ -57,7 +72,10 @@ span {
     display: flex;
     border-bottom: 1px solid rgb(164, 124, 31);
 }
-.main-img, 
+.main-img {
+    flex: 1;
+    overflow: hidden;
+} 
 .main-article {
     flex: 1;
 }
@@ -70,6 +88,10 @@ span {
     padding: 50px;
     width: 100%;
     height: auto;
+    transition: 1s;
+}
+.main-img:hover img {
+    transform: scale(1.2);
 }
 .main-about {
     display: grid;
