@@ -18,11 +18,11 @@
                <h1><span>P</span>ortfolio</h1>
             </div>
             <button class="navigation-btn"><span class="line"></span><span class="line"></span></button>
-            <ul>
-                <li><a href="#main-info">Home</a></li>
-                <li><a href="#main-about">About</a></li>
-                <li><a href="#"></a>Resume</li>
-                <li><a href="#">Contacts</a></li>
+            <ul class="header-list">
+                <li class="header-list_link"><a href="#main-info">Home</a></li>
+                <li class="header-list_link"><a href="#main-about">About</a></li>
+                <li class="header-list_link"><a href="#"></a>Resume</li>
+                <li class="header-list_link"><a href="#footer">Contacts</a></li>
             </ul>
         </nav>
     </header>
@@ -53,7 +53,28 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit nostrum magnam quam atque.</p>
             </article>
         </section>
+        <section class="main-resume">
+
+        </section>
     </main>
-    
+    <footer class="wrapper">
+        <h1>Contacts</h1>
+        <nav class="footer-container">
+            <ul class="social-link">
+                <li><a href="#"></a><img src="./icons/facebook.svg" alt="facebook" class="social-item"></li>
+                <li><a href="#"></a><img src="./icons/instagram.svg" alt="instagram" class="social-item"></li>
+                <li><a href="#"></a><img src="./icons/github.svg" alt="github" class="social-item"></li>
+                <li><a href="#"></a><img src="./icons/linkdin.svg" alt="linkedin" class="social-item"></li>
+            </ul>
+            <form action="">
+                <div class="form-input">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <textarea name="textarea" id="textarea" cols="20" rows="7">Message</textarea>
+                <button>Submit</button>
+            </form>
+        </nav>
+    </footer>
 </body>
 </html>
